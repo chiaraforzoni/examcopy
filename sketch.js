@@ -1,4 +1,4 @@
-var pointillismAreaHeight = 200,
+var pointillismAreaHeight = 300,
     points = [],
     xPosCorrectionScale = 1,
     pointSizeRange = [5, 10];
