@@ -1,4 +1,4 @@
-var pointillismAreaHeight = 300,
+var pointillismAreaHeight = 540, //a schermo interno è il punto dove tocca l'orizzonte
     points = [],
     xPosCorrectionScale = 1,
     pointSizeRange = [5, 10];
@@ -6,7 +6,8 @@ var pointillismAreaHeight = 300,
 var t;
 var moon;
 var bombs = [],
-    bombSpeed = 6,
+    frameRate = 1, //non funziona, per velocizzare per fare le scie omogenee
+    bombSpeed = 10,
     xPosCorrectionScale = 1;
 var s = second();
 var clicks = 0;
@@ -41,7 +42,7 @@ imageMode(CENTER);
     
     if(bombs.length < 100) {
         //backgroundImage(dresda)
-        image(dresda, windowWidth/2, windowHeight/2, windowWidth, windowWidth*1530/2048);
+        image(dresda, windowWidth/2, windowHeight/2, windowWidth, windowWidth/2);
 
     }
   if( bombs.length > 100 ) {
@@ -207,7 +208,7 @@ function mouseReleased() {
 function drawPointillism() {
     // draw rect
     noStroke();
-    fill(15);
+    fill(10);
     rect(0, height - pointillismAreaHeight, width, pointillismAreaHeight);
 
     // draw point
