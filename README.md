@@ -1,1 +1,1 @@
-# examcopy
+# CodingExam
