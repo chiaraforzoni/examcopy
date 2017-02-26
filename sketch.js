@@ -6,7 +6,7 @@ var pointillismAreaHeight = 300,
 var t;
 var moon;
 var bombs = [],
-    bombSpeed = 8,
+    bombSpeed = 6,
     xPosCorrectionScale = 1;
 var s = second();
 var clicks = 0;
@@ -101,6 +101,8 @@ imageMode(CENTER);
     for (var i = 0; i < bombs.length; i++) {
         if (bombs[i].y > height - pointillismAreaHeight) {
             var bomb = bombs[i];
+            ellipse(bombs[i].x, bombs[i].y,50,50);
+            bombs[i].y+=20;
             
             if (!points[i]) {
                 points[i] = {
@@ -115,7 +117,7 @@ imageMode(CENTER);
             noStroke();
             ellipse(bomb.x * xPosCorrectionScale, height - pointillismAreaHeight, bomb.size);
         } else {
-            /** bomb on the fly */
+            //scie
             fill('#A51800');
             noStroke();
             ellipse(bombs[i].x * xPosCorrectionScale, bombs[i].y,10);
